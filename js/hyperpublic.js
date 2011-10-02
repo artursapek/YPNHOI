@@ -14,12 +14,13 @@ function hyperPublic(){
 		jQuery.getJSON("https://api.hyperpublic.com/api/v1/places?callback=?",
  		params,
 		function(data){
-			for (entry in data){
-				if (data[entry].display_name == params["q"]){
-					func(data[entry]);
-					console.log(data[entry].display_name, data[entry].perma_link); 
-				}
-			}
+			//for (entry in data){
+				//if (data[entry].display_name == params["q"]){
+					
+					//console.log(data[entry].display_name, data[entry].perma_link); 
+				//}
+			//}
+			func(data[0]);
 		})	
 	};
 	return this;
