@@ -14,7 +14,7 @@ function onDeviceReady() {
 
 $(document).ready(function() {
   $('#view').live( 'pageshow',function(event, ui){
-    var query = $('#venue').attr("value");
-    $('#oh').html("<h2>OH... "+query+"?</h2>");
+    var query_venue = $('#venue').attr("value");
+    $('#query-venue').html(query_venue);
   });
 });

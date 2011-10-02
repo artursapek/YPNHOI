@@ -1,5 +1,6 @@
 .ui-content {
-  min-height: 382px;
+  min-height: 420px;
+  padding: 15px 30px;
 }
 img.geo-target {
   float: left;
@@ -39,4 +40,13 @@ h1{
 }
 .ui-input-search{
 	background-image: none;
+}
+h2.venue-title{
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+h3.snark.bad{
+	color: red;
+	font-size: 36px;
 }
