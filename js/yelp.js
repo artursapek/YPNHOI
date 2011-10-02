@@ -4,7 +4,7 @@ function yelp() {
 		var params = {term: query};
 		params["lat"] = latitude || "40.735556";
 		params["long"] = longitude || "-73.990556";
-		params["ywsid"] = "f3C78wgr2sCdH3L9qCZ3ew";
+		params["ywsid"] = "Wn-_PD_U7gkl_NHnqNAfYA";
 		jQuery.getJSON("http://api.yelp.com/business_review_search?callback=?",
  		params,
 		function(data){

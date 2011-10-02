@@ -92,6 +92,7 @@ function getStatsDiv(ypResp, hpResp, fsResp){
 	}
 	
 	console.log(totalScore);
+  $('#query-venue').append("<div style='float: right; show: block; font-weight: normal'>"+totalScore.toFixed(2)+"</div>");
 }
 
 function parseNumberIndieWords(text){
