@@ -7,7 +7,6 @@
 
 window.user = new __user__();
 
-
 function __user__(){
 	this.lat = this.lng = null;
 	
@@ -20,12 +19,10 @@ function geolocate(){
 	}
 }
 
-
 function returnCoords(p){
 	user.lat = p.coords.latitude;
 	user.lng = p.coords.longitude; 
 }
-
 
 function sanitize(x){
 	x = x.toLowerCase(); //this took me 30 minutes. #idiot
