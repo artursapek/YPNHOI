@@ -5,7 +5,7 @@
 
 function hyperPublic(){
 	this.API = "hyperPublic API: http://developer.hyperpublic.com/places/";
-	this.callJSON = function(query){
+	this.callJSON = function(query, func){
 		var params = {q: query};
 		params["client_id"] = "6ZoMqEsQLKisS4C6ZpX65HegIA1tBpttT5vK39dB";
 		params["client_secret"] = "qIKbAlT0osj4C8U3WC5HZMPN7cwnF4MFoAuoz5Hb";
@@ -14,11 +14,13 @@ function hyperPublic(){
 		jQuery.getJSON("https://api.hyperpublic.com/api/v1/places?callback=?",
  		params,
 		function(data){
-			for (entry in data){
-				if (data[entry].display_name == params["q"]){
-					console.log(data[entry].display_name, data[entry].perma_link); 
-				}
-			}
+			//for (entry in data){
+				//if (data[entry].display_name == params["q"]){
+					
+					//console.log(data[entry].display_name, data[entry].perma_link); 
+				//}
+			//}
+			func(data[0]);
 		})	
 	};
 	return this;

@@ -2,9 +2,7 @@
 <html>
 	<head>
 	<title>Page Title</title>
-	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" href="css/jquery.mobile.min.css" />
 	<link rel="stylesheet" href="css/app.css" />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -12,22 +10,36 @@
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body onload="onBodyLoad()">
-<div data-role="page" >
-  <div data-role="header" data-theme="a">
-    <h2 class="ui-header-title">Hipster, Please!</h2>
-  </div>
+
+
+
+<div data-role="page" id="home" data-theme="a" >
   <div data-role="content" data-theme="a">
+    <div class="header">
+      <h1>YPNHOI</h1>
+    </div>
     <div class="search">
       <input type="search" name="venue" id="venue" data-theme="a" placeholder="Venue Name" />
     </div>
     <div class="geo">
-      <img src="" class="geo-target" />
-      <p class="geo-location">In <strong>New York, New York</strong></p>
+      <img src="images/crosshairs.png" class="geo-target" />
+      <p class="geo-location"><strong>New York, NY</strong><span class='subtitle'>Found by stalking yr phone</span></p>
     </div>
     <div class="controls">
-      <a href="view.html" data-role="button" data-theme="a">How Hipster?</a>
+      <a href="#view" data-role="button" data-theme="a">How Hipster?</a>
     </div>
   </div>
 </div>
+
+
+
+<div data-role="page" id="view" data-theme="a">
+  <div data-role="content" data-theme="a">
+    <p>Results here.</p>
+  </div>
+</div>
+
+
+
 </body>
 </html>
