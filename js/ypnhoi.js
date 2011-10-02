@@ -32,6 +32,9 @@ function sanitize(x){
 			x = x.replace(accent, accents[accent]);
 		}
 	}
-	x = x.split('the ').join('').split('\'').join('').split('"').join('').split(',').join('').split('.').join('').split('NY').join('New York').split('-').join('');
+	x = x.split('the ').join('').split('\'').join('').split('"').join('').split(',').join('').split('.').join('').split('NY').join('New York').split('-').join('').split(' ').join('');
+	var full = x;
+	
+	
 	return x;
 }

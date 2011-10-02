@@ -21,6 +21,9 @@ function getDataScalar(latlng, query, returnFunction){
 				returnFunction(items[item]);
 				found = true;
 				break;
+			} else if (sanitize(items[item].name).indexOf(sanitize(query)) != -1){
+				returnFunction(items[item]);
+				found = true;
 			}
 		}
 		if(!found)

@@ -22,7 +22,7 @@ function go(lat, lng, query){
 	fs.callJSON(latlng, query,  function(item){
 		if(fFin) return;
 		window.fsResp = item;
-		console.log("f set"+item);
+		console.log(item);
 		fFin = true;
 		window.respond();
 		
@@ -32,7 +32,7 @@ function go(lat, lng, query){
 	yp.callJSON(query, lat, lng, function(item){
 		if(yFin) return;
 		window.ypResp = item;
-		console.log("y set" + item);
+		console.log(item);
 		yFin = true;
 		window.respond();
 	});
@@ -41,7 +41,7 @@ function go(lat, lng, query){
 	hp.callJSON(query, function(item){
 		if(hFin) return;
 		window.hpResp = item;
-		console.log("h set"+item);
+		console.log(item);
 		hFin = true;
 		window.respond();
 	});
