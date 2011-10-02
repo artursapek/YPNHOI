@@ -56,6 +56,18 @@ h3.snark.bad{
 	color: red;
 	font-size: 36px;
 }
+ul.stats{
+	list-style: none;
+	padding: 0;
+	font-weight: bold;
+	color: #aaa;
+	text-shadow: none;
+	font-size: 16px;
+}
+ul.stats li .number{
+	font-size: 30px;
+	margin-right: 5px;
+}
 .feedback a{
 	float: left;
 	width: 40%;
