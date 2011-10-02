@@ -1,1 +1,0 @@
-$.getJSON("https://api.hyperpublic.com/api/v1/places?", { format: "json" }, function(data) { 
