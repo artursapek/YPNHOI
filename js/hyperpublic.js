@@ -23,14 +23,17 @@ function hyperPublic(){
 			var found = false;
 			var items = data;
 			for (item in items){
+			if(query == null)
+				console.log("blag");
 				if (sanitize(items[item].display_name) == sanitize(query)){
 					returnFunction(items[item]);
 					found = true;
 					break;
 				} else if (sanitize(items[item].name).indexOf(sanitize(query)) != -1){
-				returnFunction(items[item]);
-				found = true;
-			}
+					returnFunction(items[item]);
+					found = true;
+					break;
+				}
 
 			}
 			if(!found)returnFunction(null);
