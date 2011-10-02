@@ -26,6 +26,7 @@ function yelp() {
 				} else if (sanitize(items[item].name).indexOf(sanitize(query)) != -1){
 				returnFunction(items[item]);
 				found = true;
+				break;
 			}
 
 			}

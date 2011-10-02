@@ -51,10 +51,10 @@ function respond(){
 		console.log("Done loading."), responsesReceived = 0;
 		var stats = new statistics();
 		$("#view .loading").hide();
-		$("#view h2.venue-title").text(ypResp.name);
-		$("#view .stats .yelp-reviews .number").text(ypResp.review_count);
-		$("#view .stats .foursquare-check-ins .number").text(fsResp.stats.checkinsCount);
-		$("#view .stats .foursquare-users .number").text(fsResp.stats.usersCount);
+		if (hpResp) $("#view h2.venue-title").text(hpResp.name) || "name not found";
+		if (ypResp) $("#view .stats .yelp-reviews .number").text(ypResp.review_count) || 0;
+		if (fsResp) $("#view .stats .foursquare-check-ins .number").text(fsResp.stats.checkinsCount) || 0;
+		if (fsResp) $("#view .stats .foursquare-users .number").text(fsResp.stats.usersCount) || 0;
 		$("#view .loaded").fadeIn();
 		stats.getStatisticsDiv(ypResp, hpResp, fsResp);
 	}
