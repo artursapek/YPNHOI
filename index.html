@@ -9,6 +9,11 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/engine.js"></script>
+	<script type="text/javascript" src="js/foursquare.js"></script>
+	<script type="text/javascript" src="js/hyperpublic.js"></script>
+	<script type="text/javascript" src="js/yelp.js"></script>
+	<script type="text/javascript" src="js/statistics.js"></script>
 </head>
 <body onload="onBodyLoad()">
 
@@ -42,15 +47,20 @@
 	<h1>YPNHOI</h1>
   </div>
   <div data-role="content" data-theme="a">
-    <h2 class="venue-title" id="query-venue"></h2>
-    <h3 class="snark bad">They've probably heard of it.</h3>
-    <ul class="stats">
-    	<li class="foursquare-check-ins"><span class="number">0</span> Foursquare Check-Ins</li>
-    	<li class="yelp-reviews"><span class="number">0</span> Yelp Reviews</li>
-    </ul>
-    <div class="feedback">
-      <a href="#like" data-role="button">Like It</a>
-      <a href="#hate" data-role="button">Hate It</a>
+  	<div class="loading">
+  		<h2>Loading...</h2>
+  	</div>
+  	<div class="loaded" style="display: none;">
+		<h2 class="venue-title" id="query-venue"></h2>
+		<h3 class="snark bad">They've probably heard of it.</h3>
+		<ul class="stats">
+			<li class="foursquare-check-ins"><span class="number">0</span> Foursquare Check-Ins</li>
+			<li class="yelp-reviews"><span class="number">0</span> Yelp Reviews</li>
+		</ul>
+		<div class="feedback">
+		  <a href="#like" data-role="button">Like It</a>
+		  <a href="#hate" data-role="button">Hate It</a>
+		</div>
     </div>
   </div>
 </div>

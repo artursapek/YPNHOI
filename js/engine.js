@@ -49,7 +49,10 @@ function respond(){
 	console.log("Respond");
 	responsesReceived++;
 	if(responsesReceived == 3){
+		console.log("Done loading.");
 		var stats = new statistics();
+		$("#view .loading").hide();
+		$("#view .loaded").fadeIn();
 		stats.getStatisticsDiv(ypResp, hpResp, fsResp);
 	}
 	
