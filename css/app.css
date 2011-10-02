@@ -50,3 +50,8 @@ h3.snark.bad{
 	color: red;
 	font-size: 36px;
 }
+.feedback a{
+	float: left;
+	width: 40%;
+	margin-right: 5%;
+}
