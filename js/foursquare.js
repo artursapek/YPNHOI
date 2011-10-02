@@ -4,17 +4,6 @@ function foursquare(){
 	};
 	return this;
 }
-
-
-function init(){
-	$("#submit").click(function(){
-		var fs = new foursquare();
-		var item = fs.callJSON("40.768853,-73.967792", "Creed", function(item){
-			alert(item.name);
-		});
-		
-	});
-}
 function getDataScalar(latlong, name, func){
 	var response;
 	jQuery.getJSON("https://api.foursquare.com/v2/venues/search?callback=?",
