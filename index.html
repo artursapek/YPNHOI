@@ -6,25 +6,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/jquery.mobile.min.css" />
-  <link rel="stylesheet" href="/css/app.css" type="text/css" />
+	<link rel="stylesheet" href="css/app.css" />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+  <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 </head>
-<body>
-<div data-role="page"> 
-  <div data-role="header" data-theme="a">
+<body onload="onBodyLoad()">
+<div data-role="page">
+  <div data-role="header" data-theme="a" data-position="fixed">
     <h2>Hipster Please</h2>
-  </div> 
+  </div>
   <div data-role="content" data-theme="b">
-    <p>Content</p>
-    <div data-role="fieldcontain">
-      <label for="venue">Venue</label>
-      <input type="search" name="venue" id="search" value="" />
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <label for="venue">Venue</label>
+      </div>
+      <div class="ui-block-b">
+        <input type="search" name="venue" id="venue" data-theme="b" />
+      </div>
     </div>
   </div>
-  <div data-role="footer">
+  <div data-role="footer" data-position="fixed">
     <h3>Footer</h3>
-  </div>
-</div>
+  </div> 
+</div> 
 </body>
 </html>
