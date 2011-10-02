@@ -14,7 +14,8 @@ function onDeviceReady() {
 
 $(document).ready(function() {
   $("#query").submit(function(e){
-    $('a[href="#view"]').trigger('click');
+	$.mobile.changePage("#view");
+	go("40.760196","-73.982019", $('#queryInput').val());
     return false;
   });
 

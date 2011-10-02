@@ -20,8 +20,9 @@ function go(lat, lng, query){
 
 	var fs = new foursquare();
 	fs.callJSON(latlng, query,  function(item){
+		if(fFin) return;
 		fsResp = item;
-		console.log("f set"+responsesReceived);
+		console.log("f set"+item);
 		fFin = true;
 		window.respond();
 		
@@ -29,16 +30,18 @@ function go(lat, lng, query){
 	
 	var yp = new yelp();
 	yp.callJSON(query, lat, lng, function(item){
+		if(yFin) return;
 		ypResp = item;
-		console.log("y set"+responsesReceived);
+		console.log("y set"+item);
 		yFin = true;
 		window.respond();
 	});
 	
 	var hp = new hyperPublic();
 	hp.callJSON(query, function(item){
+		if(hFin) return;
 		hpResp = item;
-		console.log("h set"+responsesReceived);
+		console.log("h set"+item);
 		hFin = true;
 		window.respond();
 	});
@@ -49,7 +52,10 @@ function respond(){
 	console.log("Respond");
 	responsesReceived++;
 	if(responsesReceived == 3){
+		console.log("Done loading.");
 		var stats = new statistics();
+		$("#view .loading").hide();
+		$("#view .loaded").fadeIn();
 		stats.getStatisticsDiv(ypResp, hpResp, fsResp);
 	}
 	

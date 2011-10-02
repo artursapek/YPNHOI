@@ -44,6 +44,9 @@ h1{
 	background-image:-o-linear-gradient(top,#444,#000);
 	background-image:linear-gradient(top,#444,#000)
 }
+.ui-btn-inner{
+	padding: 0.6em 16px;
+}
 .ui-input-search{
 	background-image: none;
 }
@@ -73,4 +76,8 @@ ul.stats li .number{
 	float: left;
 	width: 40%;
 	margin-right: 5%;
+}
+
+.actions .ui-btn {
+	margin: .5em 0;
 }
