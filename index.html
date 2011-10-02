@@ -16,19 +16,21 @@
 
 <div data-role="page" id="home" data-theme="a" >
   <div data-role="content" data-theme="a">
-    <div class="header">
-      <h1>YPNHOI</h1>
-    </div>
-    <div class="search">
-      <input type="search" name="venue" id="venue" data-theme="a" placeholder="Venue Name" />
-    </div>
-    <div class="geo">
-      <img src="images/crosshairs.png" class="geo-target" />
-      <p class="geo-location"><strong>New York, NY</strong><span class='subtitle'>Found by stalking yr phone</span></p>
-    </div>
-    <div class="controls">
-      <a href="#view" data-role="button" data-theme="a">how hipster?</a>
-    </div>
+    <form id="query">
+      <div class="header">
+        <h1>YPNHOI</h1>
+      </div>
+      <div class="search">
+        <input type="search" name="venue" id="venue" data-theme="a" placeholder="Venue Name" />
+      </div>
+      <div class="geo">
+        <img src="images/crosshairs.png" class="geo-target" />
+        <p class="geo-location"><strong>New York, NY</strong><span class='subtitle'>Found by stalking yr phone</span></p>
+      </div>
+      <div class="controls">
+        <a href="#view" data-role="button" data-theme="a">how hipster?</a>
+      </div>
+  </form>
   </div>
 </div>
 
@@ -41,7 +43,7 @@
 </div>
   <div data-role="content" data-theme="a">
     <h2 class="venue-title" id="query-venue"></h2>
-    <h3 class="snark bad">They've probably heard of it.</h2>
+    <h3 class="snark bad">They've probably heard of it.</h3>
     <ul class="stats">
     	<li><span class="number">0</span> Foursquare Check-Ins</li>
     	<li><span class="number">0</span> Yelp Reviews</li>
