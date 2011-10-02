@@ -9,5 +9,4 @@ function onBodyLoad() {
 }
 
 function onDeviceReady() {
-
 }

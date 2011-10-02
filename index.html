@@ -13,29 +13,16 @@
 </head>
 <body onload="onBodyLoad()">
 <div data-role="page">
-  <div data-role="header" data-theme="a" data-position="fixed">
+  <div data-role="header" data-theme="a">
     <h2>Hipster Please</h2>
   </div>
   <div data-role="content" data-theme="b">
-    <div class="ui-grid-a">
-      <div class="ui-block-a">
-        <label for="venue"><strong>Venue</strong></label>
-      </div>
-      <div class="ui-block-b">
-        <input type="search" name="venue" id="venue" data-theme="b" />
-      </div>
-      <div>
-        <p align="right" class="geo">In <strong>New York, New York</strong></p>
-      </div>
-      <div class="controls">
-
-      </div>
-
+    <input type="search" name="venue" id="venue" data-theme="b" placeholder="Venue Name" />
+    <p align="right" class="geo">In <strong>New York, New York</strong></p>
+    <div class="controls">
+      <a href="view.html" data-role="button" data-theme="a" data-icon="check" data-iconpos="right">How Hipster?</a>
     </div>
   </div>
-  <div data-role="footer" data-position="fixed">
-    <h3>Footer</h3>
-  </div> 
 </div> 
 </body>
 </html>
