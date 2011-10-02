@@ -10,9 +10,7 @@ function init(){
 }
 
 function go(lat, lng, query){
-	var fsResp, hpResp, ypResp, responsesReceived = 0;
-
-	responsesReceived = 0;
+	var fsResp, hpResp, ypResp, currentAddress, responsesReceived = 0;
 	
 	var latlng = lat+","+lng;
 	
@@ -25,7 +23,6 @@ function go(lat, lng, query){
 		console.log(item);
 		fFin = true;
 		window.respond();
-		
 	});
 	
 	var yp = new yelp();
