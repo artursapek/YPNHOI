@@ -1,5 +1,6 @@
 .ui-content {
-  min-height: 382px;
+  min-height: 420px;
+  padding: 15px 30px;
 }
 img.geo-target {
   float: left;
