@@ -1,6 +1,6 @@
 function foursquare(){
-	this.callJSON = function(latlong, query){
-		getDataScalar(latlong, query);
+	this.callJSON = function(latlong, query, func){
+		getDataScalar(latlong, query, func);
 	};
 	return this;
 }
@@ -9,12 +9,14 @@ function foursquare(){
 function init(){
 	$("#submit").click(function(){
 		var fs = new foursquare();
-		var item = fs.callJSON("40.768853,-73.967792", "Creed");
+		var item = fs.callJSON("40.768853,-73.967792", "Creed", function(item){
+			alert(item.name);
+		});
 		
 	});
 }
-function getDataScalar(latlong, name){
-console.log(latlong, name);
+function getDataScalar(latlong, name, func){
+	var response;
 	jQuery.getJSON("https://api.foursquare.com/v2/venues/search?callback=?",
 	{
 		intent: "match",
@@ -24,8 +26,8 @@ console.log(latlong, name);
 		client_secret: "BAYAUEQ3LAWJJZP5FTJLE2XWUNZGGGX0UM0OUQF510NZ1IZ5"
 	},
 	function(data){
-		var items = data.response.groups[0].items[0].name;
-		
+		var items = data.response.groups[0].items;
+		func(items[0]);
 	});
 	
 }
