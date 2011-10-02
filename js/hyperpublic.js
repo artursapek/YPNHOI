@@ -20,14 +20,16 @@ function hyperPublic(){
 					//console.log(data[entry].display_name, data[entry].perma_link); 
 				//}
 			//}
-			
+			var found = false;
 			var items = data;
 			for (item in items){
 				if (sanitize(items[item].display_name) == sanitize(query)){
 					returnFunction(items[item]);
+					found = true;
 					break;
 				}
 			}
+			if(!found)returnFunction(null);
 		})	
 	};
 	return this;

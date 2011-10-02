@@ -14,13 +14,16 @@ function yelp() {
 					//console.log(data.businesses[entry].review_count);
 				//}
 			//}
+			var found = false;
 			var items = data.businesses;
 			for (item in items){
 				if (sanitize(items[item].name) == sanitize(query)){
 					returnFunction(items[item]);
+					found = true;
 					break;
 				}
 			}
+			if(!found)returnFunction(null);
 		})	
 	};
 	
