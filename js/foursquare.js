@@ -29,5 +29,5 @@ function getDataScalar(latlng, query, returnFunction){
 			returnFunction(null);
 		
 	});
-	
+
 }
