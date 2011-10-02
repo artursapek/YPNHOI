@@ -28,9 +28,10 @@ function hyperPublic(){
 					found = true;
 					break;
 				} else if (sanitize(items[item].name).indexOf(sanitize(query)) != -1){
-				returnFunction(items[item]);
-				found = true;
-			}
+					returnFunction(items[item]);
+					found = true;
+					break;
+				}
 
 			}
 			if(!found)returnFunction(null);
