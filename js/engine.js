@@ -10,7 +10,10 @@ function init(){
 }
 
 function go(lat, lng, query){
+	var fsResp, hpResp, ypResp, responsesReceived = 0;
+
 	responsesReceived = 0;
+	
 	var latlng = lat+","+lng;
 	
 	var fFin = yFin = hFin = false;
@@ -47,8 +50,8 @@ function respond(){
 	responsesReceived++;
 	if(responsesReceived == 3){
 		var stats = new statistics();
-		console.log(fsResp);
-		console.log(fsResp.stats);
 		stats.getStatisticsDiv(ypResp, hpResp, fsResp);
 	}
+	
+	
 }
