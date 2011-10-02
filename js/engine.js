@@ -54,6 +54,8 @@ function respond(){
 		console.log("Done loading."), responsesReceived = 0;
 		var stats = new statistics();
 		$("#view .loading").hide();
+		$("#view .stats .foursquare-check-ins .number").text(fsResp.stats.checkinsCount);
+		$("#view .stats .foursquare-users .number").text(fsResp.stats.usersCount);
 		$("#view .loaded").fadeIn();
 		stats.getStatisticsDiv(ypResp, hpResp, fsResp);
 	}
