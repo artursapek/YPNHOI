@@ -109,4 +109,5 @@ function indieWordWeight(tag){
 		if(tag == i)
 			return indieWords[i];
 	}
+	return 0;
 }

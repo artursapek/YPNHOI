@@ -24,5 +24,5 @@ function getDataScalar(latlng, query, returnFunction){
 			}
 		}
 	});
-	
+
 }
