@@ -42,12 +42,12 @@ function go(lat, lng, query){
 		hFin = true;
 		window.respond();
 	});
-	
+
 }
 
 function respond(){
 	responsesReceived++;
-	if(responsesReceived == 3){
+	if(responsesReceived){
 		console.log("Done loading."), responsesReceived = 0;
 		var stats = new statistics();
 		$("#view .loading").hide();
