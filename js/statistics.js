@@ -90,9 +90,16 @@ function getStatsDiv(ypResp, hpResp, fsResp){
 		totalScore += fsResp.stats.tipCount;
 		totalScore += fsResp.stats.checkinsCount * FS_CHECKIN_WEIGHT;
 	}
-	
+	totalScore = parseInt(totalScore);
 	console.log(totalScore);
-  $('#query-venue').append("<div style='float: right; show: block; font-weight: normal'>"+totalScore.toFixed(2)+"</div>");
+  if(totalScore > -2000 && totalScore < 200){
+    var snark = "It's still cool but keep your voice down.";
+  } else if (totalScore > 201 && totalScore < 500){
+    var snark = "It's on its way out.";
+  } else {
+    var snark = "That's so old.";
+  }
+  $('h3.snark').html(snark);
 }
 
 function parseNumberIndieWords(text){

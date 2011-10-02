@@ -19,6 +19,7 @@ $(document).ready(function() {
   });
 
   $('#view').live( 'pageshow',function(event, ui){
+    console.log(event);
     var query_venue = $('#venue').attr("value");
     $('#query-venue').html(query_venue);
   });
