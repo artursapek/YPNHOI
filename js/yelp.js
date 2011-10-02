@@ -18,7 +18,7 @@ function yelp() {
 			var items = data.businesses;
 			for (item in items){
 				if (sanitize(items[item].name) == sanitize(query)){
-					returnFunction(items[item]);
+					returnFunction(items[item].name);
 					found = true;
 					break;
 				}
