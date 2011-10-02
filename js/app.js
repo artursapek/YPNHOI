@@ -17,6 +17,7 @@ $(document).ready(function() {
     $('a[href="#view"]').trigger('click');
     return false;
   });
+
   $('#view').live( 'pageshow',function(event, ui){
     var query_venue = $('#venue').attr("value");
     $('#query-venue').html(query_venue);
