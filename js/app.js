@@ -9,4 +9,12 @@ function onBodyLoad() {
 }
 
 function onDeviceReady() {
+
 }
+
+$(document).ready(function() {
+  $('#view').live( 'pageshow',function(event, ui){
+    var query = $('#venue').attr("value");
+    $('#oh').html("<h2>OH... "+query+"?</h2>");
+  });
+});
