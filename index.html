@@ -37,10 +37,10 @@
 
 
 <div data-role="page" id="view" data-theme="a">
-<div data-role="header" data-position="inline">
+  <div data-role="header" data-position="inline">
 	<a href="index.html" data-icon="arrow-l" data-theme="a">Back</a>
 	<h1>YPNHOI</h1>
-</div>
+  </div>
   <div data-role="content" data-theme="a">
     <h2 class="venue-title" id="query-venue"></h2>
     <h3 class="snark bad">They've probably heard of it.</h3>
@@ -49,12 +49,22 @@
     	<li><span class="number">0</span> Yelp Reviews</li>
     </ul>
     <div class="feedback">
-      <a href="#" data-role="button">Like It</a>
+      <a href="#like" data-role="button">Like It</a>
       <a href="#" data-role="button">Hate It</a>
     </div>
   </div>
 </div>
 
+<div data-role="page" id="like" data-theme="a">
+  <div data-role="header" data-position="inline">
+	<a href="#view" data-icon="arrow-l" data-theme="a">Back</a>
+	<h1>Like It</h1>
+  </div>
+  <div data-role="content" data-theme="a">
+   <!-- @todo add unique yelp ID after the url endpoint below! -->
+   <a href="http://www.yelp.com/writeareview/biz/" data-role="button">Write A Negative Review on Yelp</a>
+  </div>
+</div>
 
 
 </body>
