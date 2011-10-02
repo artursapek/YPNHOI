@@ -14,7 +14,7 @@ function onDeviceReady() {
 
 $(document).ready(function() {
   $("#query").submit(function(e){
-    $('a[href="#view"]').trigger('click');
+    $.mobile.changePage("#view");
     return false;
   });
   $('#view').live( 'pageshow',function(event, ui){
