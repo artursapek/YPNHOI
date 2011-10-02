@@ -32,5 +32,6 @@ function sanitize(x){
 			x = x.replace(accent, accents[accent]);
 		}
 	}
+	x = x.split('the ').join('');
 	return x;
 }
