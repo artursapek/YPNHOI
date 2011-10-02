@@ -24,7 +24,7 @@ function hyperPublic(){
 			var items = data;
 			for (item in items){
 				if (sanitize(items[item].display_name) == sanitize(query)){
-					returnFunction(items[item].display_name);
+					returnFunction(items[item]);
 					found = true;
 					break;
 				}

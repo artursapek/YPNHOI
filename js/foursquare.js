@@ -20,7 +20,7 @@ function getDataScalar(latlng, query, returnFunction){
 		var found = false;
 		for (item in items){
 			if (sanitize(items[item].name) == sanitize(query)){
-				returnFunction(items[item].name);
+				returnFunction(items[item]);
 				found = true;
 				break;
 			}
