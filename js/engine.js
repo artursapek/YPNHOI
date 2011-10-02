@@ -16,7 +16,7 @@ function go(lat, lng, query){
 	
 	var latlng = lat+","+lng;
 	
-	//var fFin = yFin = hFin = false;
+	var fFin = yFin = hFin = false;
 
 	var fs = new foursquare();
 	fs.callJSON(latlng, query,  function(item){
@@ -32,7 +32,7 @@ function go(lat, lng, query){
 	yp.callJSON(query, lat, lng, function(item){
 		if(yFin) return;
 		window.ypResp = item;
-		console.log("y set"+item);
+		console.log("y set" + item);
 		yFin = true;
 		window.respond();
 	});
