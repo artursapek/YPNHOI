@@ -52,7 +52,7 @@ function respond(){
 		var stats = new statistics();
 		$("#view .loading").hide();
     $('.number').html("");
-		if (hpResp) $("#view h2.venue-title").text(hpResp.name+"<div style='float: right; show: block; font-weight: normal'>"+totalScore+"</div>");
+		if (hpResp) $("#view h2.venue-title").text(hpResp.name) || "name not found";
 		if (ypResp) $("#view .stats .yelp-reviews .number").text(ypResp.review_count) || 0;
 		if (fsResp) $("#view .stats .foursquare-check-ins .number").text(fsResp.stats.checkinsCount) || 0;
 		if (fsResp) $("#view .stats .foursquare-users .number").text(fsResp.stats.usersCount) || 0;
