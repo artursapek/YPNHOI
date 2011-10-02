@@ -38,7 +38,7 @@
 
 <div data-role="page" id="view" data-theme="a">
   <div data-role="header" data-position="inline">
-	<a href="index.html" data-icon="arrow-l" data-theme="a">Back</a>
+	<a href="index.html" data-icon="arrow-l" data-theme="a" data-direction="reverse">Back</a>
 	<h1>YPNHOI</h1>
   </div>
   <div data-role="content" data-theme="a">
@@ -50,19 +50,33 @@
     </ul>
     <div class="feedback">
       <a href="#like" data-role="button">Like It</a>
-      <a href="#" data-role="button">Hate It</a>
+      <a href="#hate" data-role="button">Hate It</a>
     </div>
   </div>
 </div>
 
 <div data-role="page" id="like" data-theme="a">
   <div data-role="header" data-position="inline">
-	<a href="#view" data-icon="arrow-l" data-theme="a">Back</a>
+	<a href="#view" data-icon="arrow-l" data-theme="a" data-direction="reverse">Back</a>
 	<h1>Like It</h1>
   </div>
   <div data-role="content" data-theme="a">
    <!-- @todo add unique yelp ID after the url endpoint below! -->
    <a href="http://www.yelp.com/writeareview/biz/" data-role="button">Write A Negative Review on Yelp</a>
+   <a href="#" data-role="button">Generate Misleading QR Code</a>
+  </div>
+</div>
+
+<div data-role="page" id="hate" data-theme="a">
+  <div data-role="header" data-position="inline">
+	<a href="#view" data-icon="arrow-l" data-theme="a" data-direction="reverse">Back</a>
+	<h1>Hate It</h1>
+  </div>
+  <div data-role="content" data-theme="a">
+   <a href="#" data-role="button">Check-In on Foursquare</a>
+   <a href="#" data-role="button">Share on Twitter</a>
+   <a href="#" data-role="button">Share on Facebook</a>
+   <a href="#" data-role="button">Share Bit.ly Link with Friends</a>
   </div>
 </div>
 
