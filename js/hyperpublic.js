@@ -20,20 +20,22 @@ function hyperPublic(){
 					//console.log(data[entry].display_name, data[entry].perma_link); 
 				//}
 			//}
+			console.log("Try");
+			console.log(query);
+			
 			var found = false;
 			var items = data;
 			for (item in items){
-			if(query == null)
-				console.log("blag");
+				console.log("sanitize: "+query);
 				if (sanitize(items[item].display_name) == sanitize(query)){
 					returnFunction(items[item]);
 					found = true;
 					break;
-				} else if (sanitize(items[item].name).indexOf(sanitize(query)) != -1){
+				}/* else if (sanitize(items[item].name).indexOf(sanitize(query)) != -1){
 					returnFunction(items[item]);
 					found = true;
 					break;
-				}
+				}*/
 
 			}
 			if(!found)returnFunction(null);

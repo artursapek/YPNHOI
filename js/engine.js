@@ -11,7 +11,7 @@ function init(){
 
 function go(lat, lng, query){
 	var fsResp, hpResp, ypResp, currentAddress, responsesReceived = 0;
-	
+	console.log("Running go");
 	var latlng = lat+","+lng;
 	
 	var fFin = yFin = hFin = false;
