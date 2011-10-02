@@ -5,7 +5,8 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="css/jquery.mobile.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+  <link rel="stylesheet" href="/css/app.css" type="text/css" />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile.min.js"></script>
 </head>
@@ -14,10 +15,16 @@
   <div data-role="header" data-theme="a">
     <h2>Hipster Please</h2>
   </div> 
-	<div data-role="content" data-theme="b">Content</div> 
+  <div data-role="content" data-theme="b">
+    <p>Content</p>
+    <div data-role="fieldcontain">
+      <label for="venue">Venue</label>
+      <input type="search" name="venue" id="search" value="" />
+    </div>
+  </div>
   <div data-role="footer">
     <h3>Footer</h3>
-  </div> 
-</div> 
+  </div>
+</div>
 </body>
 </html>
