@@ -52,8 +52,11 @@ function respond(){
 	console.log("Respond");
 	responsesReceived++;
 	if(responsesReceived == 3){
+		console.log("Done loading.");
 		var stats = new statistics();
-		stats.getStatisticsDiv(window.ypResp, window.hpResp, window.fsResp);
+		$("#view .loading").hide();
+		$("#view .loaded").fadeIn();
+		stats.getStatisticsDiv(ypResp, hpResp, fsResp);
 	}
 	
 	
