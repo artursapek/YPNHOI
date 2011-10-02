@@ -9,12 +9,13 @@ function yelp() {
 		jQuery.getJSON("http://api.yelp.com/business_review_search?callback=?",
  		params,
 		function(data){
-			for (entry in data.businesses){
-				if (data.businesses[entry].name == params["term"]){
-					func(data.businesses[entry]);
-					console.log(data.businesses[entry].review_count);
-				}
-			}
+			//for (entry in data.businesses){
+				//if (data.businesses[entry].name == params["term"]){
+					
+					//console.log(data.businesses[entry].review_count);
+				//}
+			//}
+			func(data.businesses[0]);
 		})	
 	};
 	
