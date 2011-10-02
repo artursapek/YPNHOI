@@ -12,17 +12,22 @@
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body onload="onBodyLoad()">
-<div data-role="page">
+<div data-role="page" >
   <div data-role="header" data-theme="a">
-    <h2>Hipster Please</h2>
+    <h2 class="ui-header-title">Hipster, Please!</h2>
   </div>
-  <div data-role="content" data-theme="b">
-    <input type="search" name="venue" id="venue" data-theme="b" placeholder="Venue Name" />
-    <p align="right" class="geo">In <strong>New York, New York</strong></p>
+  <div data-role="content" data-theme="a">
+    <div class="search">
+      <input type="search" name="venue" id="venue" data-theme="a" placeholder="Venue Name" />
+    </div>
+    <div class="geo">
+      <img src="" class="geo-target" />
+      <p class="geo-location">In <strong>New York, New York</strong></p>
+    </div>
     <div class="controls">
-      <a href="view.html" data-role="button" data-theme="a" data-icon="check" data-iconpos="right">How Hipster?</a>
+      <a href="view.html" data-role="button" data-theme="a">How Hipster?</a>
     </div>
   </div>
-</div> 
+</div>
 </body>
 </html>

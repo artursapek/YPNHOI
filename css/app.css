@@ -1,6 +1,23 @@
+.ui-header .ui-title {
+  font-size: 18px;
+}
+.ui-content {
+  min-height: 700px;
+}
+img.geo-target {
+  float: left;
+  width: 50px;
+  height: 50px;
+  padding-right: 20px;
+  margin-bottom: 25px;
+}
 .geo {
-  margin-top: 25px
+  margin-top: 25px;
 }
 .controls {
-  margin-top: 25px
+  clear: both;
+  margin-top: 20px
+}
+.ui-btn-corner-all {
+  border-radius: 0px
 }
