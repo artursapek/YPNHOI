@@ -1,6 +1,6 @@
 function yelp() {
 		
-	this.callJSON = function(query, latitude, longitude){
+	this.callJSON = function(query, latitude, longitude, returnFunction){
 		var params = {term: query};
 		params["lat"] = latitude || "40.735556";
 		params["long"] = longitude || "-73.990556";
@@ -16,10 +16,11 @@ function yelp() {
 			//}
 			var items = data.businesses;
 			for (item in items){
-			if (sanitize(items[item].name) == sanitize(query)){
-				console.log(items[item]);
+				if (sanitize(items[item].name) == sanitize(query)){
+					returnFunction(items[item]);
+					break;
+				}
 			}
-		}
 		})	
 	};
 	
