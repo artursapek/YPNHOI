@@ -61,7 +61,7 @@ var FS_TIP_COUNT_WEIGHT = 10;
 var FS_CHECKIN_WEIGHT = 10;
 
 function getStatsDiv(ypResp, hpResp, fsResp){
-	var totalScore = 0;
+	totalScore = 0;
 	
 	if(ypResp == null){
 		totalScore += NOT_MENTIONED_ON_YELP_WEIGHT;
