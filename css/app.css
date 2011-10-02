@@ -1,18 +1,16 @@
-.ui-header .ui-title {
-  font-size: 18px;
-}
 .ui-content {
-  min-height: 700px;
+  min-height: 382px;
 }
 img.geo-target {
   float: left;
+
   width: 30px;
   height: 30px;
   padding-right: 20px;
   margin-bottom: 25px;
 }
 .geo {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 .geo-location .subtitle{
   color: #AAA;
@@ -20,16 +18,16 @@ img.geo-target {
 }
 .controls {
   clear: both;
-  margin-top: 20px
+  margin-top: 30px
 }
 .ui-btn-corner-all {
   border-radius: 0px
 }
 h1{
+  margin: 10px 0 30px 0;
   font-size: 3em;
 }
 .ui-body-a{
-	border:1px solid #2a2a2a;
 	background:#000;color:#fff;
 	text-shadow:0 1px 0 #000;font-weight:normal;
 	background-image:-webkit-gradient(linear,left top,left bottom,from(#444),to(#000));
