@@ -84,7 +84,6 @@ function getStatsDiv(ypResp, hpResp, fsResp){
 			totalScore += indieWordWeight(hpResp.tags[t]); 
 		}
 	}
-	console.log("st "+fsResp.stats);
 	if(fsResp != null){
 		//FOURSQUARE
 		if(fsResp.stats.usersCount != 0) totalScore += (fsResp.stats.checkinsCount/fsResp.stats.usersCount)*FS_RATIO_WEIGHT;
