@@ -16,39 +16,76 @@
 
 <div data-role="page" id="home" data-theme="a" >
   <div data-role="content" data-theme="a">
-    <div class="header">
-      <h1>YPNHOI</h1>
-    </div>
-    <div class="search">
-      <input type="search" name="venue" id="venue" data-theme="a" placeholder="Venue Name" />
-    </div>
-    <div class="geo">
-      <img src="images/crosshairs.png" class="geo-target" />
-      <p class="geo-location"><strong>New York, NY</strong><span class='subtitle'>Found by stalking yr phone</span></p>
-    </div>
-    <div class="controls">
-      <a href="#view" data-role="button" data-theme="a">how hipster?</a>
-    </div>
+    <form id="query">
+      <div class="header">
+        <h1>YPNHOI</h1>
+      </div>
+      <div class="search">
+        <input type="search" name="venue" id="venue" data-theme="a" placeholder="Venue Name" />
+      </div>
+      <div class="geo">
+        <img src="images/crosshairs.png" class="geo-target" />
+        <p class="geo-location"><strong>New York, NY</strong><span class='subtitle'>Found by stalking yr phone</span></p>
+      </div>
+      <div class="controls">
+        <a href="#view" data-role="button" data-theme="a">how hipster?</a>
+      </div>
+  </form>
   </div>
 </div>
 
 
 
 <div data-role="page" id="view" data-theme="a">
+  <div data-role="header" data-position="inline">
+	<a href="index.html" data-icon="arrow-l" data-theme="a" data-direction="reverse">Back</a>
+	<h1>YPNHOI</h1>
+  </div>
   <div data-role="content" data-theme="a">
     <h2 class="venue-title" id="query-venue"></h2>
-    <h3 class="snark bad">They've probably heard of it.</h2>
+    <h3 class="snark bad">They've probably heard of it.</h3>
     <ul class="stats">
-    	<li>0 Foursquare Check-Ins</li>
-    	<li>0 Yelp Reviews</li>
+    	<li class="foursquare-check-ins"><span class="number">0</span> Foursquare Check-Ins</li>
+    	<li class="yelp-reviews"><span class="number">0</span> Yelp Reviews</li>
     </ul>
     <div class="feedback">
-      <a href="#" data-role="button">Like It</a>
-      <a href="#" data-role="button">Hate It</a>
+      <a href="#like" data-role="button">Like It</a>
+      <a href="#hate" data-role="button">Hate It</a>
     </div>
   </div>
 </div>
 
+<div data-role="page" id="like" data-theme="a">
+  <div data-role="header" data-position="inline">
+	<a href="#view" data-icon="arrow-l" data-theme="a" data-direction="reverse">Back</a>
+	<h1>Like It</h1>
+  </div>
+  <div data-role="content" data-theme="a">
+   <h2>Keep It Hidden</h2>
+
+   <!-- @todo add unique yelp ID after the url endpoint below! -->
+   <a href="http://www.yelp.com/writeareview/biz/" data-role="button">Write Negative Review on Yelp</a>
+   <a href="#" data-role="button">Generate Misleading QR Code</a>
+   <a href="#" data-role="button">Complain to NYC Health Department</a>
+  </div>
+</div>
+
+<div data-role="page" id="hate" data-theme="a">
+  <div data-role="header" data-position="inline">
+	<a href="#view" data-icon="arrow-l" data-theme="a" data-direction="reverse">Back</a>
+	<h1>Hate It</h1>
+  </div>
+  <div data-role="content" data-theme="a">
+   <h2>Ready, Set, Gentrify!</h2>
+   <a href="#" data-role="button" target="blank">Check-In on Foursquare</a>
+   <!-- @todo replace offer?url=hackny.org with our URL instead of hackNY-->
+   <a href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=hackny.org" rel="nofollow" data-role="button" target="blank">Share on Twitter</a>
+   
+   <!-- @todo replace offer?url=hackny.org with our URL instead of hackNY-->
+   <a href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=hackny.org" rel="nofollow" data-role="button" target="blank">Share on Facebook</a>
+   <a href="#" data-role="button" target="blank">Share Bit.ly Link with Friends</a>
+  </div>
+</div>
 
 
 </body>
