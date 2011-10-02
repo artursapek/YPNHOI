@@ -5,7 +5,7 @@
 
 function hyperPublic(){
 	this.API = "hyperPublic API: http://developer.hyperpublic.com/places/";
-	this.callJSON = function(query, func){
+	this.callJSON = function(query){
 		var params = {q: query};
 		params["client_id"] = "6ZoMqEsQLKisS4C6ZpX65HegIA1tBpttT5vK39dB";
 		params["client_secret"] = "qIKbAlT0osj4C8U3WC5HZMPN7cwnF4MFoAuoz5Hb";
@@ -20,7 +20,13 @@ function hyperPublic(){
 					//console.log(data[entry].display_name, data[entry].perma_link); 
 				//}
 			//}
-			func(data[0]);
+			
+			var items = data;
+		for (item in items){
+			if (sanitize(items[item].display_name) == sanitize(query)){
+				console.log(items[item]);
+			}
+		}
 		})	
 	};
 	return this;

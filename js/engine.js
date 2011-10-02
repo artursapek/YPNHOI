@@ -1,45 +1,32 @@
-var responsesReceived = 0;
-
-var fsResp, hpResp, ypResp;
+var fsResp, hpResp, ypResp, responsesReceived = 0;
 
 function init(){
+	geolocate();
 	$('#submit').click(function(){
-		go();
+		var query = $('#queryInput').val();
+		go(window.user.lat, window.user.lng, query);
 	});
 }
 
-function go(){
+function go(lat, lng, query){
 	responsesReceived = 0;
+	var latlng = lat+","+lng;
 	
-	var lat = "40.768853"
-	var log = "-73.967792";
-	var latlong = lat+","+log;
-	var query = "Creed";
 
 	var fs = new foursquare();
-	fs.callJSON(latlong, query,  function(item){
-		fsResp = item;
-		window.respond();
+	fs.callJSON(latlng, query,  function(item){
+		
 	});
 	
 	var yp = new yelp();
-	yp.callJSON(query, lat, log, function(item){
-		ypResp = item;
-		window.respond();
+	yp.callJSON(query, lat, lng, function(item){
+		
 	});
 	
 	var hp = new hyperPublic();
 	hp.callJSON(query, function(item){
-		hpResp = item;
-		window.respond();
+	
 	});
 	
 }
 
-function respond(){
-	responsesReceived++;
-	//console.log(fsResp, ypResp, hpResp);
-	if(responsesReceived == 3){ //we've got em all
-		console.log("Yar");
-	}
-}
