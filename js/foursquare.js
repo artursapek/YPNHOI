@@ -8,7 +8,6 @@ function getDataScalar(latlng, query, returnFunction){
 	var response;
 	jQuery.getJSON("https://api.foursquare.com/v2/venues/search?callback=?",
 	{
-		intent: "match",
 		ll: latlng,
 		query: query,
 		client_id: "0EVHQJTRPV0ZWK4KISHGL3GIJJIEKIQQHYNTHO5ZEPETPXN2",
