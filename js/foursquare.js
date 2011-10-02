@@ -14,7 +14,6 @@ function getDataScalar(latlng, query, returnFunction){
 		client_secret: "BAYAUEQ3LAWJJZP5FTJLE2XWUNZGGGX0UM0OUQF510NZ1IZ5"
 	},
 	function(data){
-		console.log(data);
 		var items = data.response.groups[0].items;
 		var found = false;
 		for (item in items){
