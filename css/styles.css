@@ -1,0 +1,17 @@
+.name{
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:15px;
+}
+
+.splash{
+	text-align:center;
+	height:100px;
+	background:#BCAD91;
+	border:0px;
+	padding-top:50px;
+	font-weight:normal;
+	font-size:50px;
+	text-shadow:0 1px 0 #96866C;
+}
