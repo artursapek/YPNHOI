@@ -39,7 +39,10 @@ function hyperPublic(){
 
 			}
 			if(!found)returnFunction(null);
-		})	
+		}).error(function() {
+			console.log("Error");
+			returnFunction(null);
+		})
 	};
 	return this;
 }
